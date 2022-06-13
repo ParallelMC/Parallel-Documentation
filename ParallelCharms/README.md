@@ -162,6 +162,18 @@ PLAYER_PARTICLE:
   style:
     type: "STRING"
     val: "CUBE"
+  color:
+    type: "STRING"
+    val: "176,11,105"
+  transition:
+    type: "STRING"
+    val: "50,0,50;200,0,200"
+  vibration:
+    type: "INT"
+    val: 20
+  material:
+    type: "STRING"
+    val: "GOLD_BLOCK"
 ```
 
 - Settings
@@ -172,6 +184,18 @@ PLAYER_PARTICLE:
     - Type: `STRING`
     - Val: The style of the particle. Options include: Arrows, Batman, Beam, BlockBreak, BlockPlace, Celebration, Chains, Companion, Cube, Feet, Halo, Hurt, Invocation, Kill*, Move, Normal, Orbit, Overhead, Point, Popper, Pulse, Quadhelix, Rings, Sphere, Spin, Spiral, Swords, Thick, Twins, Vortex, Whirl, Whirlwind, Wings
     - Note: Styles with * are custom and not part of PlayerParticles
+  - `color` (optional)
+    - Type: `STRING`
+    - Val: The RGB color to add to the particle (if supported) in the form of `r,g,b`. To see supported effects, look for effects with `COLORABLE` [here](https://github.com/Rosewood-Development/PlayerParticles/blob/master/src/main/java/dev/esophose/playerparticles/particles/ParticleEffect.java).
+  - `transition` (optional)
+    - Type: `STRING`
+    - Val: The RGB color set to add to the particle (if supported) in the form of `r1,g1,b1;r2,g2,b2`. To see supported effects, look for effects with `COLORABLE_TRANSITION` [here](https://github.com/Rosewood-Development/PlayerParticles/blob/master/src/main/java/dev/esophose/playerparticles/particles/ParticleEffect.java).
+  - `vibration` (optional)
+    - Type: `INT`
+    - Val: The vibration frequency for the particle (if supported). To see supported effects, look for effects with `VIBRATION` [here](https://github.com/Rosewood-Development/PlayerParticles/blob/master/src/main/java/dev/esophose/playerparticles/particles/ParticleEffect.java).
+  - `material` (optional)
+    - Type: `STRING`
+    - Val: The material of the particle (if supported). To see supported effects, look for effects with `REQUIRES_MATERIAL_DATA` [here](https://github.com/Rosewood-Development/PlayerParticles/blob/master/src/main/java/dev/esophose/playerparticles/particles/ParticleEffect.java).
 
 ### `PARTICLE` : `RUNNABLE`
 
