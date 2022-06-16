@@ -268,3 +268,26 @@ COMMAND_KILL:
     - Val: The command to run when a player is killed by another player. `<displayname>` is replaced with the killer and `<died>` is replaced with the killed player. You can include multiple commands by including a number at the end.
     - Note: This is VERY robust. By using this with execute commands, you can execute things at the player's locations and for only certain players.
     - Note: `command` MUST be included and you must increment command numbers (you can't include `command2` without also including `command1`)
+
+
+### `COMMAND_HIT` : `EVENT<EntityDamageByEntityEvent>`
+
+```yaml
+COMMAND_HIT:
+  command:
+    type: "STRING"
+    val: "execute at <displayname> run playsound minecraft:entity.blaze.damage master @a[distance=..5] ~ ~ ~ 2"
+  command1:
+    type: "STRING"
+    val: "say bruh"
+  command2:
+    type: "STRING"
+    val: "say bruh2"
+```
+
+- Settings
+  - `command#`
+    - Type: `STRING`
+    - Val: The command to run when a player is damaged by another player. `<displayname>` is replaced with the damager and `<hit>` is replaced with the damaged player. You can include multiple commands by including a number at the end.
+    - Note: This is VERY robust. By using this with execute commands, you can execute things at the player's locations and for only certain players.
+    - Note: `command` MUST be included and you must increment command numbers (you can't include `command2` without also including `command1`)
