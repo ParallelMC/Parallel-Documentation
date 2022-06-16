@@ -245,4 +245,26 @@ PARTICLE:
     - Val: The offset in the Z direction to spawn the particles at
   - `extra`
     - Type: `DOUBLE`
-    - Val: The "extra" parameter for particles. Varies depending on the particle chosen. 
+    - Val: The "extra" parameter for particles. Varies depending on the particle chosen.
+    
+### `COMMAND_KILL` : `EVENT<PlayerDeathEvent>`
+
+```yaml
+COMMAND_KILL:
+  command:
+    type: "STRING"
+    val: "execute at <displayname> run playsound minecraft:entity.blaze.death master @a[distance=..5] ~ ~ ~ 2"
+  command1:
+    type: "STRING"
+    val: "say bruh"
+  command2:
+    type: "STRING"
+    val: "say bruh2"
+```
+
+- Settings
+  - `command#`
+    - Type: `STRING`
+    - Val: The command to run when a player is killed by another player. `<displayname>` is replaced with the killer and `<died>` is replaced with the killed player. You can include multiple commands by including a number at the end.
+    - Note: This is VERY robust. By using this with execute commands, you can execute things at the player's locations and for only certain players.
+    - Note: `command` MUST be included and you must increment command numbers (you can't include `command2` without also including `command1`)
