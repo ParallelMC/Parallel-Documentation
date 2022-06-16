@@ -276,7 +276,7 @@ COMMAND_KILL:
 COMMAND_HIT:
   command:
     type: "STRING"
-    val: "execute at <displayname> run playsound minecraft:entity.blaze.damage master @a[distance=..5] ~ ~ ~ 2"
+    val: "execute at <displayname> run playsound minecraft:entity.blaze.hurt master @a[distance=..5] ~ ~ ~ 2"
   command1:
     type: "STRING"
     val: "say bruh"
