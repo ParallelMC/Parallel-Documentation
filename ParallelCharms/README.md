@@ -132,6 +132,20 @@ LORE:
     - Type: `STRING`
     - Val: The lore to add to the item. Will also show on the charm applicator. Insert `<displayname>` to include the name of the player that applied the charm. Supports MiniMessage and PlaceholderAPI.
 
+### `APP_LORE` : `NONE`
+
+```yaml
+APP_LORE:
+  lore:
+    type: "STRING"
+    val: "This will onlybe shown on an applicator"
+```
+
+- Settings
+  - `lore`
+    - Type: `STRING`
+    - Val: The lore to add to the charm applicator
+
 ### `MESSAGE_KILL` : `EVENT<PlayerDeathEvent>`
 
 ```yaml
