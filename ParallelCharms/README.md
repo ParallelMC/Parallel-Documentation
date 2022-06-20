@@ -327,8 +327,6 @@ COMMAND_RUNNABLE:
     val: 20
 ```
 
-## NOT YET IMPLEMENTED
-
 - Settings
   - `command#`
     - Type: `STRING`
