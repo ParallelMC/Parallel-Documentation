@@ -329,3 +329,26 @@ COMMAND_RUNNABLE:
     - Val: The command to run at the specified interval. `<displayname>` is replaced with the person holding the charm. You can include multiple commands by including a number at the end.
     - Note: This is VERY robust. By using this with execute commands, you can execute things at the player's locations and for only certain players.
     - Note: `command` MUST be included and you must increment command numbers (you can't include `command2` without also including `command1`)
+
+
+### `COMMAND_APPLY` : `APPLY`
+
+```yaml
+COMMAND_APPLY:
+  command:
+    type: "STRING"
+    val: "execute at <displayname> run playsound minecraft:entity.blaze.hurt master @a[distance=..5] ~ ~ ~ 2"
+  command1:
+    type: "STRING"
+    val: "say bruh"
+  command2:
+    type: "STRING"
+    val: "say bruh2"
+```
+
+- Settings
+  - `command#`
+    - Type: `STRING`
+    - Val: The command to run when a player applies this charm on an item. `<displayname>` is replaced with the player. You can include multiple commands by including a number at the end.
+    - Note: This is VERY robust. By using this with execute commands, you can execute things at the player's locations and for only certain players.
+    - Note: `command` MUST be included and you must increment command numbers (you can't include `command2` without also including `command1`)
