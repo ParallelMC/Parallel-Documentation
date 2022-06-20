@@ -20,7 +20,6 @@ Below is an example charm that could be stored in `options.yml`.
 
 ```yaml
 testcharm:
-  uuid: "00000000-0000-0000-0000-000000000001"
   name: "TestCharm"
   allowed-materials:
     - "DIAMOND_SWORD"
@@ -53,9 +52,6 @@ testcharm:
 Here's a line by line breakdown of this file
 
 `testcharm:` This is simply a delimiter for YAML. This can be anything.
-
-`uuid:` This MUST be a unique ID in the format shown, in hexadecimal format (each character can be 0-9 and a-f).
-This is used for internal workings of the module and must be unique.
 
 `name`: A human-readable name for a charm option. This MUST be unique, as it is used to give charms to players.
 
