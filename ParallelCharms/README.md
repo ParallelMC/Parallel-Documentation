@@ -352,3 +352,17 @@ COMMAND_APPLY:
     - Val: The command to run when a player applies this charm on an item. `<displayname>` is replaced with the player. You can include multiple commands by including a number at the end.
     - Note: This is VERY robust. By using this with execute commands, you can execute things at the player's locations and for only certain players.
     - Note: `command` MUST be included and you must increment command numbers (you can't include `command2` without also including `command1`)
+
+### `SHINY` : `APPLY`
+
+```yaml
+SHINY:
+  shiny:
+    type: "INT"
+    val: 1
+```
+
+- Settings
+  - `shiny`
+    - Type: `INT`
+    - Val: If set to 1, adds enchantment glow to the item
